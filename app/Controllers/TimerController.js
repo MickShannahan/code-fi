@@ -38,5 +38,6 @@ export class TimerController{
     Pop.toast('Times up', 'warning', 
     'center', 10000)
     document.getElementById('pop').play()
+    document.getElementById('clock').innerText = ''
   }
 }
