@@ -7,7 +7,7 @@ function _drawVibes(){
   console.log('drawing vibes',vibes);
   let template = ''
   vibes.forEach(v => template += `
-  <div class="col-12 h-25 my-3 p-3 list-item" onclick="app.vibesController.getActiveVibe('v.id')">${v.name}</div>`)
+  <div class="col-12 h-25 my-3 p-3 list-item" onclick="app.vibesController.getActiveVibe('${v.id}')">${v.name}</div>`)
   document.getElementById('vibes-list').innerHTML = template
 }
 
