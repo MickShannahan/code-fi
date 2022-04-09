@@ -15,11 +15,10 @@
 </head>
 
 <body>
-  <header></header>
   <main>
     <div id="app" class="container-fluid text-light">
       <div class="row h-100">
-        <div class="col-md-3 ps-3 d-flex align-items-center">
+        <div class="col-md-3 ps-2 ps-md-3 d-flex align-items-center">
           <div id="vibes-list" class="row px-4 align-items-center">
             <!-- list vibe template -->
             <!-- <div class="col-12 h-25 my-5 p-3 list-item" onclick="app.vibesControllerGetActiveVibe(id)">
@@ -28,7 +27,7 @@
             <!-- end template -->
           </div>
         </div>
-        <div class="col-md-9 p-5 d-flex flex-column justify-content-between align-items-end">
+        <div id="section-2" class="col-md-9 p-md-5 d-flex flex-column justify-content-between align-items-end">
           <div id="timer" class="row align-items-center p-2">
             <div id="timer-collapse" class="col collapse ">
               <div class="d-flex w-100">
@@ -39,10 +38,15 @@
                 </form>
               </div>
             </div>
-            <i data-bs-target="#timer-collapse" data-bs-toggle="collapse" class="mdi mdi-clock p-2 col-1"></i>
+            <div class="col-2 p-0">
+              <button class="btn  btn-outline-light border-0" data-bs-target="#timer-collapse"
+                data-bs-toggle="collapse">
+                <i class="mdi mdi-clock p-2" data-bs-target="#timer-collapse" data-bs-toggle="collapse"></i>
+              </button>
+            </div>
             <h3 id="clock"></h3>
           </div>
-          <div class="row">
+          <div class="row w-100 p-2">
             <div id="cloud-player" class="col-12 d-flex align-items-end"></div>
           </div>
 
@@ -50,7 +54,6 @@
       </div>
     </div>
   </main>
-  <footer></footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.23.0/axios.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"

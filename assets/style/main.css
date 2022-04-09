@@ -14091,15 +14091,21 @@ textarea.form-control-lg {
   }
 }
 body {
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
   background: #1b1a1e url(https://images.unsplash.com/photo-1603468620905-8de7d86b781e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2676&q=80);
   background-position: center;
   background-size: cover;
 }
 
 main {
+  padding: 0;
+  margin: 0;
   flex-grow: 1;
   backdrop-filter: blur(7px) brightness(25%) contrast(70%);
 }
@@ -14117,6 +14123,11 @@ main #app {
   overflow-x: visible;
   direction: rtl;
 }
+@media (max-width: 768px) {
+  #vibes-list {
+    max-height: 40vh;
+  }
+}
 #vibes-list::-webkit-scrollbar {
   width: 1em;
 }
@@ -14130,6 +14141,8 @@ main #app {
   background: rgba(16, 16, 16, 0.5);
   z-index: 2;
   text-align: end;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px outset rgba(150, 150, 150, 0.3);
   backdrop-filter: blur(20px);
   border-radius: 10px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
@@ -14141,10 +14154,19 @@ main #app {
   transform: translateX(10px);
 }
 
+@media (max-width: 768px) {
+  #section-2 {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 #timer {
-  background: rgba(16, 16, 16, 0.5);
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px outset rgba(150, 150, 150, 0.3);
+  backdrop-filter: blur(20px);
   border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
 }
 #timer .collapse:not(.show) {
   display: none;
@@ -14167,6 +14189,26 @@ main #app {
 #sound-cloud {
   border-radius: 10px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 768px) {
+  #sound-cloud {
+    width: 100%;
+  }
+}
+
+#cloud-player {
+  justify-content: flex-end;
+}
+@media (max-width: 768px) {
+  #cloud-player {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 768px) {
+  #cloud-player {
+    justify-content: center;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
