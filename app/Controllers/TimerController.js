@@ -3,6 +3,7 @@ import { Pop } from "../Utils/Pop.js"
 
 function _drawClock(time){
   time = time/1000
+  console.log(time)
   let mins = Math.floor(time/60)
   let secs = time%60
   if(secs < 10) secs = '0'+ secs
@@ -26,7 +27,7 @@ export class TimerController{
         timeLeft -= 1000
         _drawClock(timeLeft)
         if(timeLeft <= 0){
-          clearInterval(this.timer)
+          this.timer = clearInterval(this.timer)
           this.timerFinished()
         }
       }, 1000);
@@ -36,5 +37,6 @@ export class TimerController{
   timerFinished(){
     Pop.toast('Times up', 'warning', 
     'center', 10000)
+    document.getElementById('pop').play()
   }
 }
