@@ -50,7 +50,7 @@
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
   --bs-body-color: #212529;
-  --bs-body-bg: #e5e5e5;
+  --bs-body-bg: #1b1a1e;
 }
 
 *,
@@ -588,7 +588,7 @@ progress {
 
 .img-thumbnail {
   padding: 0.25rem;
-  background-color: #e5e5e5;
+  background-color: #1b1a1e;
   border: 1px solid #dee2e6;
   border-radius: 0.25rem;
   max-width: 100%;
@@ -2173,7 +2173,7 @@ progress {
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
-  background-color: #e5e5e5;
+  background-color: #1b1a1e;
   background-clip: padding-box;
   border: 1px solid #ced4da;
   appearance: none;
@@ -2193,7 +2193,7 @@ progress {
 }
 .form-control:focus {
   color: #212529;
-  background-color: #e5e5e5;
+  background-color: #1b1a1e;
   border-color: #9dd2ee;
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(59, 165, 220, 0.25);
@@ -2340,7 +2340,7 @@ textarea.form-control-lg {
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
-  background-color: #e5e5e5;
+  background-color: #1b1a1e;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-position: right 0.75rem center;
@@ -2402,7 +2402,7 @@ textarea.form-control-lg {
   height: 1em;
   margin-top: 0.25em;
   vertical-align: top;
-  background-color: #e5e5e5;
+  background-color: #1b1a1e;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -2499,10 +2499,10 @@ textarea.form-control-lg {
   outline: 0;
 }
 .form-range:focus::-webkit-slider-thumb {
-  box-shadow: 0 0 0 1px #e5e5e5, 0 0 0 0.25rem rgba(59, 165, 220, 0.25);
+  box-shadow: 0 0 0 1px #1b1a1e, 0 0 0 0.25rem rgba(59, 165, 220, 0.25);
 }
 .form-range:focus::-moz-range-thumb {
-  box-shadow: 0 0 0 1px #e5e5e5, 0 0 0 0.25rem rgba(59, 165, 220, 0.25);
+  box-shadow: 0 0 0 1px #1b1a1e, 0 0 0 0.25rem rgba(59, 165, 220, 0.25);
 }
 .form-range::-moz-focus-outer {
   border: 0;
@@ -3869,8 +3869,8 @@ textarea.form-control-lg {
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
   color: #495057;
-  background-color: #e5e5e5;
-  border-color: #dee2e6 #dee2e6 #e5e5e5;
+  background-color: #1b1a1e;
+  border-color: #dee2e6 #dee2e6 #1b1a1e;
 }
 .nav-tabs .dropdown-menu {
   margin-top: -1px;
@@ -4564,7 +4564,7 @@ textarea.form-control-lg {
   font-size: 1rem;
   color: #212529;
   text-align: left;
-  background-color: #e5e5e5;
+  background-color: #1b1a1e;
   border: 0;
   border-radius: 0;
   overflow-anchor: none;
@@ -4615,7 +4615,7 @@ textarea.form-control-lg {
 }
 
 .accordion-item {
-  background-color: #e5e5e5;
+  background-color: #1b1a1e;
   border: 1px solid rgba(0, 0, 0, 0.125);
 }
 .accordion-item:first-of-type {
@@ -14094,11 +14094,60 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #e5e5e5;
+  background: #1b1a1e url(https://images.unsplash.com/photo-1603468620905-8de7d86b781e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2676&q=80);
+  background-position: center;
+  background-size: cover;
 }
 
 main {
   flex-grow: 1;
+  backdrop-filter: blur(7px) brightness(25%) contrast(70%);
+}
+main #app {
+  background-position: center;
+  background-size: cover;
+  transition: all 1s ease;
+  height: 100vh;
+  width: 100%;
+}
+
+#vibes-list {
+  max-height: 99vh;
+  overflow-y: scroll;
+  overflow-x: visible;
+  direction: rtl;
+}
+#vibes-list::-webkit-scrollbar {
+  width: 1em;
+}
+#vibes-list::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.list-item {
+  position: relative;
+  background: rgba(16, 16, 16, 0.5);
+  z-index: 2;
+  text-align: end;
+  backdrop-filter: blur(20px);
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  transition: all ease 0.17s;
+}
+.list-item:hover {
+  background: #3ba5dc;
+  color: #111927;
+  transform: translateX(10px);
+}
+
+.text-shadow {
+  text-shadow: 0px 0px 8px rgba(32, 32, 32, 0.6);
+}
+
+#sound-cloud {
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 /*# sourceMappingURL=main.css.map */

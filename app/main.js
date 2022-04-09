@@ -1,7 +1,8 @@
-import { ValuesController } from "./Controllers/ValuesController.js";
+import { VibesController } from "./Controllers/VibesController.js";
 
 class App {
-  valuesController = new ValuesController();
+
+  vibesController = new VibesController()
 }
 
 window["app"] = new App();
