@@ -9,7 +9,7 @@ class VibesService{
   async getVibes(){
     const res = await api.get('api/vibes')
     console.log('get vibes', res.data)
-    ProxyState.vibes = res.data.map(v => new Vibe(v))
+    ProxyState.vibes = res.data
   }
   async getActiveVibe(id) {
     const res = await api.get('api/vibes/'+ id)

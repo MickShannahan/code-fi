@@ -9,13 +9,14 @@ export class Vibe{
     this.plays = data.plays
   }
 
-  get ListTemplate(){
-    return `
-    <div class="col-12 h-25 my-3 p-3 list-item" onclick="app.vibesController.getActiveVibe('${this.id}')">
-      ${this.name}
-    </div>
-    `
-  }
+  // NOTE show this maybe? or a static for it?
+  // get ListTemplate(){
+  //   return `
+  //   <div class="col-12 h-25 my-3 p-3 list-item" onclick="app.vibesController.getActiveVibe('${this.id}')">
+  //     ${this.name}
+  //   </div>
+  //   `
+  // }
 
   get PlayerTemplate(){
     return `
