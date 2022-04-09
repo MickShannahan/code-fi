@@ -8,6 +8,7 @@
   <link rel="icon" href="https://bcw.blob.core.windows.net/public/img/9977764104160066">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="assets/style/main.css">
   <link rel="stylesheet" href="assets/style/style.css">
   <title>code-fi</title>
@@ -27,7 +28,23 @@
             <!-- end template -->
           </div>
         </div>
-        <div id="cloud-player" class="col-md-9 p-5 d-flex justify-content-end align-items-end">
+        <div class="col-md-9 p-5 d-flex flex-column justify-content-between align-items-end">
+          <div id="timer" class="row align-items-center p-2">
+            <div id="timer-collapse" class="col collapse ">
+              <div class="d-flex w-100">
+                <form class="input-group" onsubmit="app.timerController.startTimer()">
+                  <input type="number" name="mins" class="form-control" value="15">
+                  <button class="btn btn-outline-light form-control" data-bs-target="#timer-collapse"
+                    data-bs-toggle="collapse"> start timebox</button>
+                </form>
+              </div>
+            </div>
+            <i data-bs-target="#timer-collapse" data-bs-toggle="collapse" class="mdi mdi-clock p-2 col-1"></i>
+            <h3 id="clock"></h3>
+          </div>
+          <div class="row">
+            <div id="cloud-player" class="col-12 d-flex align-items-end"></div>
+          </div>
 
         </div>
       </div>

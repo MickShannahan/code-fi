@@ -70,6 +70,30 @@ main {
   }
 }
 
+#timer {
+  background: rgba(16, 16, 16, 0.5);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, .3);
+  border-radius: 10px;
+
+  .collapse {
+    &:not(.show) {
+      display: none;
+    }
+  }
+
+  .collapsing {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    transition: width .35s ease;
+    transition: height .35s ease;
+  }
+
+  input {
+    color: $light
+  }
+}
+
 .text-shadow {
   text-shadow: 0px 0px 8px rgba(32, 32, 32, 0.6);
 }
