@@ -43,7 +43,7 @@ $color-ranges: (0: 0,
 
 $form-range-track-height:         .25rem;
 $form-range-track-cursor:         pointer;
-$form-range-track-bg:             $secondary;
+$form-range-track-bg:             $light;
 $form-range-track-border-radius:  1rem;
 
 $form-range-thumb-width:                   1rem;
@@ -53,5 +53,5 @@ $form-range-thumb-border:                  0;
 $form-range-thumb-border-radius:           1rem;
 $form-range-thumb-box-shadow:              0 .1rem .25rem rgba($dark, .1);
 $form-range-thumb-focus-box-shadow:        0 0 0 1px $body-bg;
-$form-range-thumb-active-bg:               tint-color($primary, 90%);
+$form-range-thumb-active-bg:               tint-color($primary, 100%);
 $form-range-thumb-transition:              background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;

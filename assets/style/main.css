@@ -2523,14 +2523,14 @@ textarea.form-control-lg {
   }
 }
 .form-range::-webkit-slider-thumb:active {
-  background-color: tint-color(#3af0d2, 90%);
+  background-color: tint-color(#3af0d2, 100%);
 }
 .form-range::-webkit-slider-runnable-track {
   width: 100%;
   height: 0.25rem;
   color: transparent;
   cursor: pointer;
-  background-color: #8392ab;
+  background-color: #e9ecef;
   border-color: transparent;
   border-radius: 1rem;
 }
@@ -2549,14 +2549,14 @@ textarea.form-control-lg {
   }
 }
 .form-range::-moz-range-thumb:active {
-  background-color: tint-color(#3af0d2, 90%);
+  background-color: tint-color(#3af0d2, 100%);
 }
 .form-range::-moz-range-track {
   width: 100%;
   height: 0.25rem;
   color: transparent;
   cursor: pointer;
-  background-color: #8392ab;
+  background-color: #e9ecef;
   border-color: transparent;
   border-radius: 1rem;
 }
