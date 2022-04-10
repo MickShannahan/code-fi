@@ -145,3 +145,15 @@ main {
     justify-content: center;
   }
 }
+
+#volume-control{
+ .form-range{
+ width:          240px;  
+ 
+}
+  @media  (max-width: $medium-screen) {
+    .form-range{
+      width:          100%;  
+     }
+  }
+}
