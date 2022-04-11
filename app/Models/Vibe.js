@@ -20,7 +20,6 @@ export class Vibe{
 
   get PlayerTemplate(){
     return `
-    
     <div class="pe-4 text-shadow">
       <h1> ${this.name}</h1>
       <p class="w-100 text-end"><b>plays ${this.plays}</b></p>
